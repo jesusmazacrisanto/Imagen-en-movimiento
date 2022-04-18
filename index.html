@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animar Sprites con CSS</title>
+
+    <style>
+        .personaje{
+            height: 284px;
+            width: 155px;
+            background:url("yone2.jpg");
+            margin: auto;
+            /*background-position: -146px 0;*/
+            animation: correr 2s steps(4) infinite;
+            position:absolute;
+            left: 40%;
+            bottom: 1080px;
+
+                }
+
+        .fondo  {
+            height: 367px;
+            width: 550px;
+            background:url("nueva-york.jpg");
+            position: relative;
+            left: 25%;
+            animation: AnimarFondo 2s linear infinite;
+        }
+        @keyframes correr{
+            0%{
+                background-position: 0px;
+            }
+            100%{
+                background-position: -620px;
+            }
+                        }
+            @keyframes AnimarFondo{
+                0%{
+                background-position: 0px;
+            }
+            100%{
+                background-position: -550px;
+            }                    
+                                }
+    </style>
+</head>
+<body>
+    <div class="fondo" ></div>
+    <div class="personaje"></div>
+    
+</body>
+</html>
